@@ -17,8 +17,7 @@ RUN echo "/usr/local/lib" >> /etc/ld.so.conf && ldconfig && \
     cp /build/bin/ld* /usr/local/bin/ && \
     cp /build/bin/ld-dev-cluster /usr/local/bin/ && \
     apt-get remove -y $(cat logdevice/build_tools/ubuntu_cleanup.deps) && \
-    apt-get autoremove -y && \
-    rm -rf build logdevice
+    apt-get autoremove -y 
 
 ENV LOGDEVICE_TEST_BINARY=/usr/local/bin/logdeviced
 
