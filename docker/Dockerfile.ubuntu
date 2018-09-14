@@ -4,7 +4,7 @@ MAINTAINER Ahmed Soliman <asoli@fb.com>
 
 ARG PARALLEL=4
 
-COPY logdevice logdevice
+COPY ../logdevice logdevice
 
 RUN echo "/usr/local/lib" >> /etc/ld.so.conf && ldconfig && \
     apt-get update && \
