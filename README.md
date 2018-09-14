@@ -1,4 +1,7 @@
 # LogDevice
+
+> Add dockerhub auto build
+
 [![Build Status](https://circleci.com/gh/facebookincubator/LogDevice.svg?style=shield&circle-token=1a68ba9a5f81ea693f341726bc4039980490f16e)](https://circleci.com/gh/facebookincubator/LogDevice)
 
 LogDevice is a scalable and fault tolerant distributed log system. While a
