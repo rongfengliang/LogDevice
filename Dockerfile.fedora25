@@ -17,7 +17,7 @@ RUN dnf install -y $(cat logdevice/build_tools/fedora-25.deps) && \
     cp /tmp/build/bin/ld* /usr/local/bin/ && \
     cp /tmp/build/bin/ld-dev-cluster /usr/local/bin/
 
-RUN rm -rf /tmp/build logdevice /folly /rocksdb /usr/local/lib/*.a
+RUN rm -rf /tmp/build ./logdevice /folly /rocksdb /usr/local/lib/*.a
 
 RUN dnf remove -y cmake autoconf autoconf-archive automake wget file git gcc-c++
 
