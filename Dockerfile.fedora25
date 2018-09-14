@@ -10,12 +10,12 @@ RUN echo "/usr/local/lib" >> /etc/ld.so.conf && ldconfig
 
 RUN dnf install -y $(cat logdevice/build_tools/fedora-25.deps) && \
     dnf clean all && \
-    mkdir /tmp/build && cd /tmp/build && \
+    mkdir tmp/build && cd tmp/build && \
     cmake logdevice/ && \
     make -j$PARALLEL && \
     make install && \
-    cp /tmp/build/bin/ld* /usr/local/bin/ && \
-    cp /tmp/build/bin/ld-dev-cluster /usr/local/bin/
+    cp tmp/build/bin/ld* /usr/local/bin/ && \
+    cp tmp/build/bin/ld-dev-cluster /usr/local/bin/
 
 RUN dnf remove -y cmake autoconf autoconf-archive automake wget file git gcc-c++
 
